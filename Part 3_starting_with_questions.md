@@ -50,7 +50,7 @@ Answer:
 -- Each countries' total transaction revenue query
 
 |	Country		| Orders | Total Transaction Revenue |
-|----------------------------------------------------|
+|---------------|--------|---------------------------|
 | United States	|	76	 |		13154.17			 |
 | Israel		|	1	 |	    602.00				 |
 | Australia		|	1	 |	    358.00				 |
@@ -62,7 +62,7 @@ Answer:
 -- Each city's total trancaction revenue
 
 |	Country		| 		City		| Orders | Total Transaction Revenue |
-|------------------------------------------------------------------------|
+|---------------|-------------------|--------|---------------------------|
 | United States |	NULL	        |    25	 |		6092.56				 |
 | United States |	San Francisco	|	 12	 |	    1564.32				 |
 | United States |	Sunnyvale		|	 4	 |   	992.23				 |
@@ -140,7 +140,7 @@ Answer:
 -- Avg Units Per Country LIMIT 10
 
 | Country  		| Avg_Units_Sold_Per_Order	|
-|-------------------------------------------|
+|---------------|---------------------------|
 | United States |	19.24					|
 | Czechia	    |   15.18					|
 | Mexico	    |	1.83					|
@@ -157,7 +157,7 @@ Answer:
 -- Avg Units Per City & Country LIMIT 10
 
 | Country  		| City			| Avg_Units_Sold_Per_Order	|
-|-----------------------------------------------------------|
+|---------------|---------------|---------------------------|
 | United States | San Bruno	 	| 52.67					 	|
 | United States | NULL          | 29.09						|
 | United States | Mountain View | 16.17						|
@@ -504,7 +504,7 @@ Cities & country with the highest revenue from Ecommerce Database
 
 
 | Country  		| 	City		| Total Revenue		|
-|---------------------------------------------------|
+|---------------|---------------|-------------------|
 | United States | Mountain View |	1684114.98		|
 | United States | San Bruno		|	382015.74		|
 | United States | New York		|	117292.58		|
