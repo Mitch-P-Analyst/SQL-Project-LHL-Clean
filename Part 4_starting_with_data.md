@@ -72,17 +72,3 @@ Answer:
 " Cam Indoor Security Camera - USA" - Longest restocking time of 42
 
 "Satin Black Ballpoint Pen" / "Twill Cap" / "Badge Holder" / " 22 oz Water Bottle" - Shortest restocking time of 2
-
-Question 4: 
-
-SQL Queries:
-
-Answer:
-
-
-
-Question 5: 
-
-SQL Queries:
-
-Answer:

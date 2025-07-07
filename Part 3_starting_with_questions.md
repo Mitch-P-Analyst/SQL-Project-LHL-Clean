@@ -55,7 +55,7 @@ Answer:
 "Canada"	        2		        150.15
 "Switzerland"	    1		        16.99
 
--- Each city's total trancaction revenue LIMIT *
+-- Each city's total trancaction revenue
 
 "United States"	 NULL	            25	    2190.95	6092.56
 "United States"	"San Francisco"	    12		        1564.32

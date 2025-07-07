@@ -47,7 +47,6 @@ Creation of a View 'product_categories', numerous CTE's such as 'visitor_units' 
 - Longest and shortest restocking time
 
 ### Part 5 - Quality Assurance
-Readressing similar issues presented in Part 2 - Cleaning Data.
 
 - Inconsistent data formatting
 - No viable Primary Keys

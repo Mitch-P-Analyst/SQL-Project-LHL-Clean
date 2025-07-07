@@ -7,6 +7,16 @@ Through observations of the Ecommerce LHL Dataset, what data validation issues h
 
 What issues will you address by cleaning the data?
 
+### 🧹 Cleaning Summary Table
+
+| Column            | Issue Identified                              | Cleaning Action 
+|-------------------|-----------------------------------------------|------------------------------------------------|
+| `city`            | Placeholder values '(not set)'                | Replaced with NULL using `CASE` statement      |
+| `timesite`        | Seconds not user-friendly                     | Converted to minutes with type cast + division |
+| `country`         | Incorrect naming (e.g. 'New York / Canada')   | Mapped to correct country using `CASE` logic   |
+| `product_category`| Inconsistent formatting                       | Extract identifiers using REGEX_MATCH.         |
+| `product_name`    | Inconsistent formatting                       | Referenced accurate name via SKU using `JOIN`  |
+ 
 - City Column
 	- Removing invalid Text entries
 		- producing NULL values for accurate data responses

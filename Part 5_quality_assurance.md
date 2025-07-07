@@ -1,5 +1,37 @@
 What are your risk areas? Identify and describe them.
 
+## Risks & Limitations
+
+- Duplicate Risks | 
+    - **Issue**
+        - No unique identifier across all orders or customers.
+    - **Dectected**
+        - No [`Primary Keys`](##Primary_keys), COUNT() vs COUNT(DISTINCT) 
+    - **Outcome**
+        - ***Order duplicates*** may result in inaccurate totals of revenue or units orders when summarising by city, country
+        
+
+- Irregular Formatting |
+
+    - **Issue**
+        - Inconsistent ***Product Names***
+    - **Detected**
+        - [`Inconsistent Product Names`](##Inconsistent_Product_Name_&_Category_Formatting) with irregular formatting and syntax
+    - **Outcome**
+        - `LOWER(TRIM())` #1 step to address formatting
+        - `JOIN` with product_table via productsku / sku for accurate names
+        - `DISTINCT` selections and `VIEW` to estalbish unique products for referencing
+
+    - **Issue**
+        - Inconsistent ***Product Categories*** | no regularly structured format. 
+    - **Detected**
+        - [`Inconsistent Product Categories`](##Inconsistent_Product_Name_&_Category_Formatting) Arrayformula performed to extract listed categorical names for formatting
+    - **Outcome**
+        - ***Analytical Bias*** may be exhibited from manual assignment of product_categories for products with NULL values. 
+            Manual assignment of product_category through `CASE` statements based upon anticpated category. 
+        - Alternative method to reference product_names of `SIMILAR TO` structure, extracting relevant product_category.
+
+
 ## Primary Keys
 With no primary keys across all tables and CSV files, issues are present for duplication and redunant data. 
 
@@ -42,5 +74,19 @@ Therefore, a REGEX Arrayformula was utilised to extract cateogrical names for co
                 ON als.productsku = p.sku
     ```
 
-QA Process:
-Describe your QA process and include the SQL queries used to execute it.
+    ``` sql
+            ...
+                -- Assigned categorises to NULL values by key identifiers
+                populated_categories AS (
+                    SELECT
+                        DISTINCT(product_name),
+                        CASE
+                            -- Office Item Identifiers
+                            WHEN product_name ILIKE '%Pen%' 
+                            OR 	 product_name ILIKE '%Journal%' 
+                            OR 	 product_name ILIKE '%Suitcase%'
+                            OR 	 product_name ILIKE '%Notebook%' 
+                            OR 	 product_name ILIKE '%mouse pad%' 
+                                THEN '{office}'
+            ...
+    ```
