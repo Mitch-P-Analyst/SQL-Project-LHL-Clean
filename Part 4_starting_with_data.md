@@ -69,6 +69,14 @@ WHERE pr.restockingleadtime = rs.MAX_restocking_time
 ```
 Answer:
 
-" Cam Indoor Security Camera - USA" - Longest restocking time of 42
+<!-- Time variable not estalbished -->
 
-"Satin Black Ballpoint Pen" / "Twill Cap" / "Badge Holder" / " 22 oz Water Bottle" - Shortest restocking time of 2
+| Product Name 						| Rank Of Restocking Time | Time |
+|-----------------------------------|-------------------------|------|
+| Cam Indoor Security Camera - USA  | Longest				  | 42   |
+| Satin Black Ballpoint Pen			| Shortest 				  | 2    |
+| Twill Cap							| Shortest 				  | 2    |
+| Badge Holder						| Shortest 				  | 2    |
+| 22 oz Water Bottle 				| Shortest 				  | 2    |
+|-----------------------------------|-------------------------|------|
+

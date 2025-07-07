@@ -32,6 +32,15 @@ What are your risk areas? Identify and describe them.
         - Alternative method to reference product_names of `SIMILAR TO` structure, extracting relevant product_category.
 
 
+- Unknown Variables |
+    -  **Issue**
+        - No known 'time' variable associated with `RestockingLeadTime`
+    - **Detected**
+        - Integer of full values ranging 2 - 42
+    - **Outcome**
+        - Analytical Insights uncertain on time integer context
+
+
 ## Primary Keys
 With no primary keys across all tables and CSV files, issues are present for duplication and redunant data. 
 

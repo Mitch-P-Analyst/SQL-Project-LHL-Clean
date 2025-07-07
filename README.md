@@ -30,7 +30,7 @@ Preparation of column datatypes, null values and text-formatting across tables f
 
 ### Part 3 - Questions & Answers
 
-Creation of a View 'product_categories', numerous CTE's such as 'visitor_units' and a Temporary Table 'top_city_products' produced viable SQL Query Syntax for anlysis on question objectives
+Creation of a View 'product_categories', numerous CTE's such as 'visitor_units' and a Temporary Table 'top_city_products' produced viable SQL Query Syntax for analysis on question objectives
 
 #### Objectves
 - Cities and countries with the highest transaction revenues
