@@ -56,7 +56,7 @@ Answer:
 | Australia		|	1	 |	    358.00				 |
 | Canada		|	2	 |	    150.15				 |
 | Switzerland	|	1	 |	    16.99				 |
-|----------------------------------------------------|
+|---------------|--------|---------------------------|
 
 
 -- Each city's total trancaction revenue
@@ -73,7 +73,7 @@ Answer:
 | United States |	Mountain View	|    8	 |	    483.36				 |
 | United States |	Los Angeles		|	 2	 |	    479.48				 |
 | United States |	Chicago			|	 3	 |	    449.52				 |
-|------------------------------------------------------------------------|
+|---------------|-------------------|--------|---------------------------|
 
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
@@ -151,7 +151,7 @@ Answer:
 | Japan	        |	1.14					|
 | India     	|	1.11					|
 | Finland	    |	1.00					|
-|-------------------------------------------|
+|---------------|---------------------------|
 
 
 -- Avg Units Per City & Country LIMIT 10
@@ -168,7 +168,7 @@ Answer:
 | United States | Chicago		| 6.19						|
 | United States	| Nashville		| 5.33						|
 | United States	| Jersey City	| 5.27						|
-|-----------------------------------------------------------|
+|---------------|---------------|---------------------------|
 **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
 In this question, I recognise a failure in my Data Valiation process. This instance occured when I personally assigned categories to NULL values by key identifiers. This injection of personal opinon in data manipulation may inflict bias, and deviate from accurately reflecting the product categories within the raw data. 
@@ -510,7 +510,7 @@ Cities & country with the highest revenue from Ecommerce Database
 | United States | New York		|	117292.58		|
 | United States | Chicago		|	91007.13		|
 | United States | Sunnyvale		|	40060.77		|
-|---------------------------------------------------|
+|---------------|---------------|-------------------|
 
 Table Data Found in downloaded .CSV File 'Part 3 - Question 5 - Total Revenue Per Country City.csv'
 
