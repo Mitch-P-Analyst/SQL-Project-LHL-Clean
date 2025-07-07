@@ -139,7 +139,7 @@ Answer:
 
 -- Avg Units Per Country LIMIT 10
 
-| Country  		| Avg_Units_Sold_Per_Order
+| Country  		| Avg_Units_Sold_Per_Order	|
 |-------------------------------------------|
 | United States |	19.24					|
 | Czechia	    |   15.18					|
@@ -156,7 +156,7 @@ Answer:
 
 -- Avg Units Per City & Country LIMIT 10
 
-| Country  		| City			| Avg_Units_Sold_Per_Order
+| Country  		| City			| Avg_Units_Sold_Per_Order	|
 |-----------------------------------------------------------|
 | United States | San Bruno	 	| 52.67					 	|
 | United States | NULL          | 29.09						|
@@ -503,7 +503,7 @@ Answer:
 Cities & country with the highest revenue from Ecommerce Database
 
 
-| Country  		| 	City		| Total Revenue
+| Country  		| 	City		| Total Revenue		|
 |---------------------------------------------------|
 | United States | Mountain View |	1684114.98		|
 | United States | San Bruno		|	382015.74		|
