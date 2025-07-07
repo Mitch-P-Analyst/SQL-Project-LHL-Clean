@@ -168,7 +168,9 @@ Answer:
 | United States | Chicago		| 6.19						|
 | United States	| Nashville		| 5.33						|
 | United States	| Jersey City	| 5.27						|
-|---------------|---------------|---------------------------|
+|				|				|							|
+
+
 **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
 In this question, I recognise a failure in my Data Valiation process. This instance occured when I personally assigned categories to NULL values by key identifiers. This injection of personal opinon in data manipulation may inflict bias, and deviate from accurately reflecting the product categories within the raw data. 
