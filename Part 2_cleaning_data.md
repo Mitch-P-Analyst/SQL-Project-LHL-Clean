@@ -7,7 +7,7 @@ Through observations of the Ecommerce LHL Dataset, what data validation issues h
 
 What issues will you address by cleaning the data?
 
-### 🧹 Cleaning Summary Table
+### Cleaning Summary Table
 
 | Column            | Issue Identified                              | Cleaning Action 
 |-------------------|-----------------------------------------------|------------------------------------------------|
