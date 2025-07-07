@@ -57,7 +57,9 @@ Readressing similar issues presented in Part 2 - Cleaning Data.
 ## Results
 - 33.77% of products have not sold any units.
 - USA is the largest country consumer
-- No trends in 
+- No trends in individual product purcahses
+- Apparel & Lifestyle highest quantity units sold
+- Large city consumers = Mountain View USA, San Bruno USA, New York USA, Chicago USA, Sunnyvale USA
 
 ## Challenges 
 
