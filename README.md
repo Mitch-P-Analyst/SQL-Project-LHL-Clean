@@ -56,8 +56,8 @@ Creation of a View 'product_categories', numerous CTE's such as 'visitor_units' 
 ## Results
 - 33.77% of products have not sold any units.
 - USA is the largest country consumer
-- No trends in individual product purcahses
-- Apparel & Lifestyle highest quantity units sold
+- No trends in individual product purchases, however, several isolated purchases in large quantity of indivdual products
+- Apparel & Lifestyle product categories are present among isolated large orders
 - Large city consumers = Mountain View USA, San Bruno USA, New York USA, Chicago USA, Sunnyvale USA
 
 ## Challenges 

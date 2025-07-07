@@ -49,24 +49,32 @@ Answer:
 
 -- Each countries' total transaction revenue query
 
-"United States"	    76	    2390.95	13154.17
-"Israel"	        1		        602.00
-"Australia"	        1		        358.00
-"Canada"	        2		        150.15
-"Switzerland"	    1		        16.99
+|	Country		| Orders | Total Transaction Revenue |
+|----------------------------------------------------|
+| United States	|	76	 |		13154.17			 |
+| Israel		|	1	 |	    602.00				 |
+| Australia		|	1	 |	    358.00				 |
+| Canada		|	2	 |	    150.15				 |
+| Switzerland	|	1	 |	    16.99				 |
+|----------------------------------------------------|
+
 
 -- Each city's total trancaction revenue
 
-"United States"	 NULL	            25	    2190.95	6092.56
-"United States"	"San Francisco"	    12		        1564.32
-"United States"	"Sunnyvale"	        4	    200.00	992.23
-"United States"	"Atlanta"	        2		        854.44
-"United States"	"Palo Alto"	        3		        608.00
-"Israel"	    "Tel Aviv-Yafo"	    1		        602.00
-"United States"	"New York"	        9   	        598.35
-"United States"	"Mountain View"	    8		        483.36
-"United States"	"Los Angeles"	    2		        479.48
-"United States"	"Chicago"	        3		        449.52
+|	Country		| 		City		| Orders | Total Transaction Revenue |
+|------------------------------------------------------------------------|
+| United States |	NULL	        |    25	 |		6092.56				 |
+| United States |	San Francisco	|	 12	 |	    1564.32				 |
+| United States |	Sunnyvale		|	 4	 |   	992.23				 |
+| United States |	Atlanta			|	 2	 |	    854.44				 |
+| United States |	Palo Alto		|	 3	 |	    608.00				 |
+| Israel		| 	Tel Aviv-Yafo	|	 1	 |      602.00				 |
+| United States |	New York		|	 9   |	    598.35				 |
+| United States |	Mountain View	|    8	 |	    483.36				 |
+| United States |	Los Angeles		|	 2	 |	    479.48				 |
+| United States |	Chicago			|	 3	 |	    449.52				 |
+|------------------------------------------------------------------------|
+
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
@@ -131,30 +139,36 @@ Answer:
 
 -- Avg Units Per Country LIMIT 10
 
-"United States"	19.24
-"Czechia"	    15.18
-"Mexico"	    1.83
-"Canada"	    1.59
-"Bulgaria"	    1.50
-"Germany"	    1.25
-"Hong Kong"	    1.23
-"Japan"	        1.14
-"India"     	1.11
-"Finland"	    1.00
+| Country  		| Avg_Units_Sold_Per_Order
+|-------------------------------------------|
+| United States |	19.24					|
+| Czechia	    |   15.18					|
+| Mexico	    |	1.83					|
+| Canada	    |	1.59					|
+| Bulgaria	    |	1.50					|
+| Germany	    |	1.25					|
+| Hong Kong	    |	1.23					|
+| Japan	        |	1.14					|
+| India     	|	1.11					|
+| Finland	    |	1.00					|
+|-------------------------------------------|
+
 
 -- Avg Units Per City & Country LIMIT 10
 
-"United States"	"San Bruno"	    52.67
-"United States"	NULL            29.09
-"United States"	"Mountain View"	16.17
-"Czechia"		NULL            15.18
-"United States"	"San Jose"	    8.57
-"United States"	"Salem"	        7.55
-"United States"	"New York"	    6.90
-"United States"	"Chicago"	    6.19
-"United States"	"Nashville"	    5.33
-"United States"	"Jersey City"	5.27
-
+| Country  		| City			| Avg_Units_Sold_Per_Order
+|-----------------------------------------------------------|
+| United States | San Bruno	 	| 52.67					 	|
+| United States | NULL          | 29.09						|
+| United States | Mountain View | 16.17						|
+| Czechia		| NULL          | 15.18						|
+| United States | San Jose		| 8.57						|
+| United States | Salem	      	| 7.55						|
+| United States | New York	  	| 6.90						|
+| United States | Chicago		| 6.19						|
+| United States	| Nashville		| 5.33						|
+| United States	| Jersey City	| 5.27						|
+|-----------------------------------------------------------|
 **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
 In this question, I recognise a failure in my Data Valiation process. This instance occured when I personally assigned categories to NULL values by key identifiers. This injection of personal opinon in data manipulation may inflict bias, and deviate from accurately reflecting the product categories within the raw data. 
@@ -318,7 +332,9 @@ ORDER BY vu.country_cleaned,vu.city_cleaned, total_units_sold DESC
 
 Answer:
 
-From the cateogries I have distinuished, while Lifestyle & Apparel products do have significantly high unit sales across cities worldwide and particuarly for USA cities are as the largest country customer, these are primiarly in isolated incidents. There does not seem to be a trend product_category types. 
+- Lifestyle & Apparel products have significantly high unit sales across cities worldwide
+	- Tthese are primiarly in isolated incidents. 
+	- There does not seem to be a trend product_category types. 
 
 
 
@@ -430,7 +446,7 @@ ORDER BY cities_with_top_product DESC
 Answer:
 
 -- Top product per city/country acquired. Found in downloaded .CSV File 'Part 3 - Question 4 - Top Product Per Country City.csv'
--- No signifcant pattern of regularly occuring top product.
+-- **No signifcant pattern of regularly occuring top product.**
 
 
 
@@ -486,11 +502,15 @@ Answer:
 
 Cities & country with the highest revenue from Ecommerce Database
 
-"United States"	"Mountain View"	1684114.98
-"United States"	"San Bruno"		382015.74
-"United States"	"New York"		117292.58
-"United States"	"Chicago"		91007.13
-"United States"	"Sunnyvale"		40060.77
+
+| Country  		| 	City		| Total Revenue
+|---------------------------------------------------|
+| United States | Mountain View |	1684114.98		|
+| United States | San Bruno		|	382015.74		|
+| United States | New York		|	117292.58		|
+| United States | Chicago		|	91007.13		|
+| United States | Sunnyvale		|	40060.77		|
+|---------------------------------------------------|
 
 Table Data Found in downloaded .CSV File 'Part 3 - Question 5 - Total Revenue Per Country City.csv'
 
