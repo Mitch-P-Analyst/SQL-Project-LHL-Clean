@@ -69,7 +69,7 @@ WHERE pr.restockingleadtime = rs.MAX_restocking_time
 ```
 Answer:
 
-<!-- Time variable not estalbished -->
+- Time variable not estalbished
 
 | Product Name 						| Rank Of Restocking Time | Time |
 |-----------------------------------|-------------------------|------|

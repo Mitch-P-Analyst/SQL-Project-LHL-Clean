@@ -6,7 +6,7 @@ What are your risk areas? Identify and describe them.
     - **Issue**
         - No unique identifier across all orders or customers.
     - **Dectected**
-        - No [`Primary Keys`](##Primary-Keys), COUNT() vs COUNT(DISTINCT) 
+        - No [`Primary Keys`](#primary-keys), COUNT() vs COUNT(DISTINCT) 
     - **Outcome**
         - ***Order duplicates*** may result in inaccurate totals of revenue or units orders when summarising by city, country
         
@@ -16,7 +16,7 @@ What are your risk areas? Identify and describe them.
     - **Issue**
         - Inconsistent ***Product Names***
     - **Detected**
-        - [`Inconsistent Product Names`](##Inconsistent-Product-Name-&-Category-Formatting) with irregular formatting and syntax
+        - [`Inconsistent Product Names`](#inconsistent-product-name-and-category-formatting) with irregular formatting and syntax
     - **Outcome**
         - `LOWER(TRIM())` #1 step to address formatting
         - `JOIN` with product_table via productsku / sku for accurate names
@@ -25,7 +25,7 @@ What are your risk areas? Identify and describe them.
     - **Issue**
         - Inconsistent ***Product Categories*** | no regularly structured format. 
     - **Detected**
-        - [`Inconsistent Product Categories`](##Inconsistent-Product-Name-&-Category-Formatting) Arrayformula performed to extract listed categorical names for formatting
+        - [`Inconsistent Product Categories`](#inconsistent-product-name-and-category-formatting) Arrayformula performed to extract listed categorical names for formatting
     - **Outcome**
         - ***Analytical Bias*** may be exhibited from manual assignment of product_categories for products with NULL values. 
             Manual assignment of product_category through `CASE` statements based upon anticpated category. 
@@ -44,29 +44,28 @@ What are your risk areas? Identify and describe them.
 ## Primary Keys
 With no primary keys across all tables and CSV files, issues are present for duplication and redunant data. 
 
-    ```sql
+    ``` sql
 
         -- Retrieve distinct visitorid for relavent of unique visitors & customers
-
         SELECT 
             COUNT(DISTINCT fullvistorid),
             COUNT(fullvistorid)
         FROM all_sessions
-
+       
         -- Same issue arises in analytics table
-
         SELECT
             COUNT(DISCINT fullvisitorid),
             COUNT(fullvisitorid)
         FROM analytics
+             
 
     ```
 
-## Inconsistent Product Name & Category Formatting
+## Inconsistent Product Name And Category Formatting
 Product names from 'All_Sessions' table are irregularly formatted and could prevent accurate grouping.
 Addressed by identifying unique SKU code and extracting data from 'Products' table
    
-    ```sql
+    ``` sql
 
         SELECT
             LOWER(TRIM(p.name)) AS product_name,
@@ -78,7 +77,7 @@ Addressed by identifying unique SKU code and extracting data from 'Products' tab
 Product Categories are irregulary formatted in 'All_Sessions' table from an Ecommerce populated source, and no other product_categories source is available in provided datebase.
 Therefore, a REGEX Arrayformula was utilised to extract cateogrical names for consitent formatting
 
-    ```sql
+    ``` sql
 
         SELECT 
             DISTINCT(LOWER(TRIM(p.name))) AS product_name,
@@ -88,7 +87,7 @@ Therefore, a REGEX Arrayformula was utilised to extract cateogrical names for co
                 ON als.productsku = p.sku
     ```
 
-    ```sql
+    ``` sql
 
         ...
             -- Assigned categorises to NULL values by key identifiers
